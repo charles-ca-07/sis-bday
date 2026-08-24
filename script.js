@@ -11,7 +11,7 @@ let activeScene = 0;
 let musicStarted = false;
 let cakeCut = false;
 let slideTimer;
-const photos = ['images/photo1.jpeg','images/photo2.jpeg','images/photo3.jpg','images/photo4.jpeg','images/photo5.webp'];
+const photos = ['photo1.jpg','photo2.jpg','photo3.jpg','photo4.jpg','photo5.jpg'];
 const captions = ['The moments that make everything brighter.', 'A lifetime of laughter in one frame.', 'The kind of memories we keep forever.', 'My favorite person, in every season.', 'Here is to every chapter still to come.'];
 
 function showScene(index) {
