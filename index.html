@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#110c20">
+  <title>For My Dear Sister | A Birthday Film</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="scene-shell" id="scene-shell">
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="aurora aurora-one" aria-hidden="true"></div>
+    <div class="aurora aurora-two" aria-hidden="true"></div>
+    <div class="topbar">
+      <span class="film-mark"><i></i> A LITTLE FILM FOR YOU</span>
+      <button class="music-control" id="music-control" type="button" aria-label="Play birthday music" title="Play birthday music">
+        <span class="music-icon">♫</span><span id="music-label">Music off</span>
+      </button>
+    </div>
+
+    <main>
+      <section class="scene intro is-active" id="intro" aria-labelledby="intro-title">
+        <div class="intro-content">
+          <p class="eyebrow">A story made with love</p>
+          <h1 id="intro-title">Something Special<br><em>Is Waiting For You...</em></h1>
+          <div class="countdown" id="countdown" aria-live="polite"><span>3</span></div>
+          <p class="hint">Turn up the volume and stay awhile</p>
+        </div>
+      </section>
+
+      <section class="scene celebration" id="celebration" aria-labelledby="celebration-title">
+        <div class="celebration-content">
+          <p class="eyebrow">Today is all about you</p>
+          <h2 id="celebration-title">Happy Birthday,<br><em>My Dear Kutta!</em> <span>🎂✨</span></h2>
+          <p class="subtitle">Here’s to your brightest chapter yet.</p>
+          <button class="scroll-cue" id="celebrate-next" type="button"><span>Keep the magic going</span><b>↓</b></button>
+        </div>
+        <div class="balloons" aria-hidden="true"><span class="balloon pink"></span><span class="balloon gold"></span><span class="balloon lilac"></span></div>
+      </section>
+
+      <section class="scene cake-scene" id="cake-scene" aria-labelledby="cake-title">
+        <div class="section-intro"><p class="eyebrow">Make a wish</p><h2 id="cake-title">Let’s Cut the Cake! <span>🎂</span></h2><p>Tap the cake to start the celebration.</p></div>
+        <button class="cake-button" id="cake-button" type="button" aria-label="Cut the birthday cake">
+          <span class="cake-candle"><i></i></span><span class="cake-top"></span><span class="cake-middle"></span><span class="cake-base"></span><span class="cake-plate"></span><span class="cake-knife">▱</span>
+        </button>
+        <p class="cake-success" id="cake-success">Yayyy! The Celebration Begins! <span>🎉❤️</span></p>
+      </section>
+
+      <section class="scene message-scene" id="message" aria-labelledby="message-title">
+        <div class="message-card"><p class="eyebrow">From my heart to yours</p><h2 id="message-title">A Little Message <em>For You</em> <span>❤️</span></h2><p class="letter" id="letter"></p><p class="signature">With all my love, <span>♡</span></p><button class="text-button" id="message-next" type="button">Open your memories <b>→</b></button></div>
+      </section>
+
+      <section class="scene memories-scene" id="memories" aria-labelledby="memories-title">
+
+  <div class="memories-heading">
+    <p class="eyebrow">A few favorite frames</p>
+
+    <h2 id="memories-title">
+      Our Little <em>Universe</em>
+    </h2>
+
+    <div class="slide-counter" id="slide-counter">
+      1 <small>/ 5</small>
+    </div>
+  </div>
+
+  <div class="slideshow" id="slideshow">
+
+    <div class="photo-frame">
+
+      <!-- ACTUAL PHOTO -->
+      <img
+        id="memory-image"
+        src="images/photo1.jpeg"
+        alt="A birthday memory"
+      >
+
+      <!-- Dark overlay -->
+      <div class="photo-shade"></div>
+
+      <!-- Shown only if image cannot be found -->
+      <div class="photo-placeholder" id="photo-placeholder">
+        Your beautiful memory
+        <br>
+        <small>photo1.jpg</small>
+      </div>
+
+    </div>
+
+    <div class="progress-track">
+      <i id="slide-progress"></i>
+    </div>
+
+  </div>
+
+  <p class="memory-caption" id="memory-caption">
+    The moments that make everything brighter.
+  </p>
+
+</section>
+
+      <section class="scene final-scene" id="final" aria-labelledby="final-title">
+        <div class="final-content"><p class="eyebrow">And the story continues...</p><h2 id="final-title">Happy Birthday<br><em>Once Again, Sis!</em> <span>❤️🎂</span></h2><p>May your life always be filled with happiness, love, success and beautiful memories. ✨</p><div class="final-rule"></div><small>Made with love, just for you</small></div><div class="final-balloons" aria-hidden="true">♡　✦　♡　✦　♡</div>
+      </section>
+    </main>
+  </div>
+  <audio id="birthday-audio" src="birthday-song.mp3" loop preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
